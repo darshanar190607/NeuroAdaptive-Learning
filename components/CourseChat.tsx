@@ -7,8 +7,8 @@ import { OpticsAnimation } from './OpticsAnimation';
 const ArrowDownIcon: React.FC = () => <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>;
 const GenerateIcon: React.FC<{className?: string}> = ({className}) => <svg className={`w-5 h-5 mr-2 ${className}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.636 4.364l.707.707M6.343 6.343l-.707-.707m12.728 0l.707-.707"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg>;
 const RefreshIcon: React.FC = () => <svg className="w-5 h-5 text-gray-400 hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h5M20 20v-5h-5"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 9a9 9 0 0114.65-4.65L20 5M20 15a9 9 0 01-14.65 4.65L4 19"></path></svg>;
-const BookIcon: React.FC<{className?: string}> = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${className}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>;
-const CubeIcon: React.FC<{className?: string}> = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${className}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>;
+const BookIcon: React.FC<{className?: string}> = ({className}) => <svg xmlns="http://www.w.org/2000/svg" className={`w-6 h-6 ${className}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>;
+const CubeIcon: React.FC<{className?: string}> = ({className}) => <svg xmlns="http://www.w.org/2000/svg" className={`w-6 h-6 ${className}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>;
 const ComicIcon: React.FC<{className?: string}> = ({className}) => <svg xmlns="http://www.w3.org/2000/svg" className={`w-6 h-6 ${className}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.5 12.5c0-6.5-4-9-4.5-9-1-.5-2 1-3 2-2 2-5 2-7 0-1-1-2.5-2.5-3.5-2-1.5 1-4.5 4-4.5 9.5s4.5 9.5 11 9.5 11-3 11-9.5z"></path></svg>;
 const TrophyIcon: React.FC = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" /></svg>;
 const CardIcon: React.FC = () => <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>;
@@ -75,6 +75,7 @@ const CourseChat: React.FC = () => {
                 model: 'gemini-2.5-flash',
                 contents: `Generate a detailed course outline for the topic: "${topic}". Provide about 5-7 main topics. Each topic should have a title and a few bullet points. Also provide a recommended total study time (e.g., "4 hours").`,
                 config: {
+                    temperature: 0.6,
                     responseMimeType: "application/json",
                     responseSchema: {
                         type: Type.OBJECT,
@@ -121,6 +122,7 @@ const CourseChat: React.FC = () => {
                 model: 'gemini-2.5-flash',
                 contents: `A user wants to learn about "${topic}" in ${studyTime}. The original, ideal outline has these topics: ${JSON.stringify(outline.map(o => o.title))}. Please adjust this outline to fit the specified timeframe. If the time is short, condense it to the most critical topics. If it's long, you can keep the original. Return only the adjusted outline.`,
                 config: {
+                    temperature: 0.6,
                     responseMimeType: "application/json",
                     responseSchema: {
                         type: Type.OBJECT,
@@ -194,7 +196,8 @@ const CourseChat: React.FC = () => {
                     };
                     const staticRes = await ai.models.generateContent({ 
                         model: 'gemini-2.5-flash', 
-                        contents: `Provide a summary of the key concepts for a course on "${topic}". Cover these topics: ${outline?.map(o=>o.title).join(', ')}. Please write the content following these style guidelines precisely: ${JSON.stringify(responseStyle)}` 
+                        contents: `Provide a summary of the key concepts for a course on "${topic}". Cover these topics: ${outline?.map(o=>o.title).join(', ')}. Please write the content following these style guidelines precisely: ${JSON.stringify(responseStyle)}`,
+                        config: { temperature: 0.6 }
                     });
                     setStaticContent(staticRes.text);
                     break;
@@ -204,7 +207,7 @@ const CourseChat: React.FC = () => {
                     if (topic.toLowerCase().includes('optics')) {
                         setVisual3DContent({ type: 'gsap' });
                     } else {
-                        const searchRes = await ai.models.generateContent({ model: 'gemini-2.5-flash', contents: `Find a public, embeddable 3D model URL from Sketchfab for the topic "${topic}". Return just the URL.`, config: { tools: [{ googleSearch: {} }] } });
+                        const searchRes = await ai.models.generateContent({ model: 'gemini-2.5-flash', contents: `Find a public, embeddable 3D model URL from Sketchfab for the topic "${topic}". Return just the URL.`, config: { tools: [{ googleSearch: {} }], temperature: 0.6 } });
                         const url = searchRes.text.trim();
                          if (url && url.startsWith('http')) {
                             setVisual3DContent({ type: 'embed', url });
@@ -216,8 +219,8 @@ const CourseChat: React.FC = () => {
     
                 case 'COMIC':
                     if (comicImageUrl) break;
-                    const storyRes = await ai.models.generateContent({ model: 'gemini-2.5-flash', contents: `Create a simple, clear concept for a single-panel educational comic about "${topic}". Describe the scene, characters, and any text bubbles for an image generation AI. The style should be fun and informative.` });
-                    const imageRes = await ai.models.generateContent({ model: 'gemini-2.5-flash-image', contents: { parts: [{ text: `Generate a comic-style image based on this description: ${storyRes.text}` }] }, config: { responseModalities: [Modality.IMAGE] } });
+                    const storyRes = await ai.models.generateContent({ model: 'gemini-2.5-flash', contents: `Create a simple, clear concept for a single-panel educational comic about "${topic}". Describe the scene, characters, and any text bubbles for an image generation AI. The style should be fun and informative.`, config: { temperature: 0.6 } });
+                    const imageRes = await ai.models.generateContent({ model: 'gemini-2.5-flash-image', contents: { parts: [{ text: `Generate a comic-style image based on this description: ${storyRes.text}` }] }, config: { responseModalities: [Modality.IMAGE], temperature: 0.6 } });
                     const base64Image = imageRes.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
                     if (base64Image) {
                          setComicImageUrl(`data:image/png;base64,${base64Image}`);
@@ -228,10 +231,27 @@ const CourseChat: React.FC = () => {
     
                 case 'VIDEO':
                     if (videoIds.length > 0) break;
-                    const videoRes = await ai.models.generateContent({ model: 'gemini-2.5-flash', contents: `Find 3 relevant YouTube video URLs for a beginner learning about "${topic}". Return only a comma-separated list of the full URLs.`, config: { tools: [{ googleSearch: {} }] } });
+                    
+                    const extractVideoID = (url: string): string | null => {
+                        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+                        const match = url.match(regExp);
+                        return (match && match[2].length === 11) ? match[2] : null;
+                    };
+
+                    const videoRes = await ai.models.generateContent({ 
+                        model: 'gemini-2.5-flash', 
+                        contents: `Find 3 publicly embeddable, highly-rated YouTube tutorial video URLs for a beginner learning about "${topic}". Prioritize channels known for quality educational content. The videos must be available and not private or deleted. Return only a comma-separated list of the full video URLs.`, 
+                        config: { tools: [{ googleSearch: {} }], temperature: 0.6 } 
+                    });
+                    
                     const urls = videoRes.text.split(',').map(url => url.trim());
-                    const ids = urls.map(url => url.split('v=')[1]?.split('&')[0]).filter(Boolean);
-                    setVideoIds(ids);
+                    const ids = urls.map(extractVideoID).filter((id): id is string => id !== null);
+
+                    if (ids.length > 0) {
+                      setVideoIds(ids);
+                    } else {
+                      throw new Error("Could not find any valid YouTube videos.");
+                    }
                     break;
             }
         } catch (e) {
@@ -262,6 +282,7 @@ Example format:
 {"description": "Your description here", "imageUrl": "http://example.com/image.jpg"}`,
                 config: {
                     tools: [{ googleSearch: {} }],
+                    temperature: 0.6,
                 }
             });
             let jsonText = response.text;
@@ -301,6 +322,7 @@ Example format:
                 model: 'gemini-2.5-flash',
                 contents: `Generate a 5-question multiple-choice quiz about the entire course: "${topic}". The questions should be of ${difficulty} difficulty. For each question, provide 4 options and specify the correct answer.`,
                 config: {
+                    temperature: 0.6,
                     responseMimeType: "application/json",
                     responseSchema: {
                         type: Type.OBJECT,
@@ -363,7 +385,8 @@ Example format:
             const scoresText = rounds.map(r => `Round ${r.id} (${r.difficulty}): ${r.score || 0}%`).join(', ');
             const response = await ai.models.generateContent({
                 model: 'gemini-2.5-flash',
-                contents: `Analyze a student's quiz scores for "${topic}". Scores: ${scoresText}. Provide a one-sentence analysis of their learning pace (e.g., "You're a quick study, grasping concepts rapidly!" or "You build knowledge steadily and methodically, ensuring a strong foundation.").`
+                contents: `Analyze a student's quiz scores for "${topic}". Scores: ${scoresText}. Provide a one-sentence analysis of their learning pace (e.g., "You're a quick study, grasping concepts rapidly!" or "You build knowledge steadily and methodically, ensuring a strong foundation.").`,
+                config: { temperature: 0.6 }
             });
             setLearningPace(response.text);
         } catch(e) { console.error("Failed to predict learning pace", e); setLearningPace("You've successfully completed the course!"); } finally { setIsLoading(false); }
@@ -564,12 +587,12 @@ Example format:
         const fetchContent = async () => {
              if (view === 'PROJECT' && !projectContent) {
                  setIsLoading(true); setLoadingMessage('Generating final project...');
-                 const res = await ai.models.generateContent({model: 'gemini-2.5-flash', contents: `Generate a simple, real-time project idea for a beginner who just completed a course on "${topic}". Provide a brief, a list of requirements, and a potential challenge.`});
+                 const res = await ai.models.generateContent({model: 'gemini-2.5-flash', contents: `Generate a simple, real-time project idea for a beginner who just completed a course on "${topic}". Provide a brief, a list of requirements, and a potential challenge.`, config: { temperature: 0.6 }});
                  setProjectContent(res.text);
                  setIsLoading(false);
             } else if (view === 'CERTIFICATE' && !certificateContent) {
                  setIsLoading(true); setLoadingMessage('Generating your certificate...');
-                 const res = await ai.models.generateContent({model: 'gemini-2.5-flash', contents: `Generate a personalized certificate text for a student who completed the course on "${topic}". Mention their achievement and offer one key area for future improvement based on the general challenges of learning this topic.`});
+                 const res = await ai.models.generateContent({model: 'gemini-2.5-flash', contents: `Generate a personalized certificate text for a student who completed the course on "${topic}". Mention their achievement and offer one key area for future improvement based on the general challenges of learning this topic.`, config: { temperature: 0.6 }});
                  setCertificateContent(res.text);
                  setIsLoading(false);
             }
